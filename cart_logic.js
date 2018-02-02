@@ -73,5 +73,14 @@ function calculateTotal (grossTotal, addedShipping, addedTax) {
 
 */
 function updateProdAvailability(product, selected, availability) {
-    return; // replace this!
+    if (selected > (availability-1)){
+    updateProdAvailabilityLabel(product, "Out of Stock", OUT_OF_STOCK)
+}
+    else if (availability-selected<=5){
+    updateProdAvailabilityLabel(product, "Limited Suppy", LIMITED_SUPPLY)
+}
+    else if (availability-selected>5) {
+    updateProdAvailabilityLabel(product, "In Stock", AVAILABLE)
+    }    
+    ; // replace this!
 }
