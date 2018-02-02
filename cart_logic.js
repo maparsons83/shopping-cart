@@ -3,8 +3,19 @@
       Input: quantity selected (integer)
       Output: product line totals (double)
 */
+var price=document.getElementByClassName("prodPrice").innerHTML;
+var quantity=document.getElementsByClassName("prodQuantity").innerHTML;
+var total=document.getElementsByClassName("prodTotal").innerHTML;
+var subtotal = document.getElementsByClassName("value subtotal").innerHTML;
+var grossTotal = prodTotals[0] + prodTotals[1] + prodTotals[2];
+
+
 function calculateProdTotal (price, quantity) {
-    return 0;   // replace this!
+    
+    return price*quantity
+    
+    
+    // replace this!
 }
 
 /* 2. Complete the function below to calculate gross cart totals
@@ -16,7 +27,7 @@ function calculateProdTotal (price, quantity) {
             always have 3 elements (i.e., bananas, oranges, apples)
 */
 function calculateSubtotal (prodTotals) {
-    return 0;   // replace this!
+    return prodTotals[0]+prodTotals[1]+prodTotals[2];   // replace this!
 }
 
 /* 3. Complete the function below to calculate added taxes
@@ -25,7 +36,7 @@ function calculateSubtotal (prodTotals) {
       Output: added taxes for the cart (double)
 */
 function calculateTaxes(grossTotal, taxRate) {
-    return 0;   // replace this!
+    return grossTotal*1.05;   // replace this!
 }
 
 /* 4. Complete the function below to calculate total
@@ -35,7 +46,7 @@ function calculateTaxes(grossTotal, taxRate) {
       Output: total cart amount inclusive of shipping and taxes (double)
 */
 function calculateTotal (grossTotal, addedShipping, addedTax) {
-    return 0;   // replace this!
+    return grossTotal * 1.05 + 4;   // replace this!
 }
 
 /* 5. We want to inform the users when certain items run out of stock
